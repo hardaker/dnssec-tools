@@ -236,11 +236,15 @@ QStringList TestManager::loadResolvConf()
         struct sockaddr_in6     *sa6 = (struct sockaddr_in6 *) serv_addr;
 
         if (sa->sin_family == AF_INET) {
-            ret = inet_ntop(sa->sin_family, &sa->sin_addr,
-                            buffer, sizeof(buffer)-1);
+            snprintf(buffer, sizeof(buffer)-1, "%d.%d.%d.%d",
+                     sa->sin_addr.S_un.S_un_b.s_b1,
+                     sa->sin_addr.S_un.S_un_b.s_b2,
+                     sa->sin_addr.S_un.S_un_b.s_b3,
+                     sa->sin_addr.S_un.S_un_b.s_b4
+                     );
         } else {
-            ret = inet_ntop(sa6->sin6_family, &sa6->sin6_addr,
-                            buffer, sizeof(buffer)-1);
+            //ret = inet_ntop(sa6->sin6_family, &sa6->sin6_addr,
+            //                buffer, sizeof(buffer)-1);
         }
         if (ret) {
             m_serverAddresses.push_back(QString(buffer));
