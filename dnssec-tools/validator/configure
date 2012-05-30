@@ -13597,7 +13597,7 @@ fi
 
 
 
-ac_config_files="$ac_config_files Makefile:Makefile.top:Makefile.in libsres/Makefile:Makefile.top:libsres/Makefile.in:Makefile.bot libval/Makefile:Makefile.top:libval/Makefile.in:Makefile.bot libval_shim/Makefile:Makefile.top:libval_shim/Makefile.in:Makefile.bot doc/Makefile:Makefile.top:doc/Makefile.in:Makefile.bot apps/Makefile:Makefile.top:apps/Makefile.in:Makefile.bot"
+ac_config_files="$ac_config_files  Makefile:Makefile.top:Makefile.in libsres/Makefile:Makefile.top:libsres/Makefile.in:Makefile.bot libval/Makefile:Makefile.top:libval/Makefile.in:Makefile.bot libval_shim/Makefile:Makefile.top:libval_shim/Makefile.in:Makefile.bot doc/Makefile:Makefile.top:doc/Makefile.in:Makefile.bot apps/Makefile:Makefile.top:apps/Makefile.in:Makefile.bot"
 
 ac_config_files="$ac_config_files libval-config:libval-config.in"
 
@@ -14595,12 +14595,13 @@ do
   case $ac_config_target in
     "include/validator/validator-config.h") CONFIG_HEADERS="$CONFIG_HEADERS include/validator/validator-config.h" ;;
     "libtool") CONFIG_COMMANDS="$CONFIG_COMMANDS libtool" ;;
-    "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile:Makefile.top:Makefile.in" ;;
-    "libsres/Makefile") CONFIG_FILES="$CONFIG_FILES libsres/Makefile:Makefile.top:libsres/Makefile.in:Makefile.bot" ;;
-    "libval/Makefile") CONFIG_FILES="$CONFIG_FILES libval/Makefile:Makefile.top:libval/Makefile.in:Makefile.bot" ;;
-    "libval_shim/Makefile") CONFIG_FILES="$CONFIG_FILES libval_shim/Makefile:Makefile.top:libval_shim/Makefile.in:Makefile.bot" ;;
-    "doc/Makefile") CONFIG_FILES="$CONFIG_FILES doc/Makefile:Makefile.top:doc/Makefile.in:Makefile.bot" ;;
-    "apps/Makefile") CONFIG_FILES="$CONFIG_FILES apps/Makefile:Makefile.top:apps/Makefile.in:Makefile.bot" ;;
+    "") CONFIG_FILES="$CONFIG_FILES " ;;
+    "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile:Makefile.top:Makefile.in" ;;
+    "libsres/Makefile") CONFIG_FILES="$CONFIG_FILES libsres/Makefile:Makefile.top:libsres/Makefile.in:Makefile.bot" ;;
+    "libval/Makefile") CONFIG_FILES="$CONFIG_FILES libval/Makefile:Makefile.top:libval/Makefile.in:Makefile.bot" ;;
+    "libval_shim/Makefile") CONFIG_FILES="$CONFIG_FILES libval_shim/Makefile:Makefile.top:libval_shim/Makefile.in:Makefile.bot" ;;
+    "doc/Makefile") CONFIG_FILES="$CONFIG_FILES doc/Makefile:Makefile.top:doc/Makefile.in:Makefile.bot" ;;
+    "apps/Makefile") CONFIG_FILES="$CONFIG_FILES apps/Makefile:Makefile.top:apps/Makefile.in:Makefile.bot" ;;
     "libval-config") CONFIG_FILES="$CONFIG_FILES libval-config:libval-config.in" ;;
     "libval/val_inline_conf.h") CONFIG_FILES="$CONFIG_FILES libval/val_inline_conf.h:libval/val_inline_conf.h.in" ;;
     "default") CONFIG_COMMANDS="$CONFIG_COMMANDS default" ;;
@@ -15417,7 +15418,7 @@ shlibpath_overrides_runpath=$shlibpath_overrides_runpath
 libname_spec=$lt_libname_spec
 
 # List of archive names.  First name is the real one, the rest are links.
-# The last name is the one that the linker finds with -lNAME
+# The last name is the one that the linker finds with -lNAME.
 library_names_spec=$lt_library_names_spec
 
 # The coded name of the library, if different from the real name.
@@ -15533,7 +15534,7 @@ allow_undefined_flag=$lt_allow_undefined_flag
 no_undefined_flag=$lt_no_undefined_flag
 
 # Flag to hardcode \$libdir into a binary during linking.
-# This must work even if \$libdir does not exist
+# This must work even if \$libdir does not exist.
 hardcode_libdir_flag_spec=$lt_hardcode_libdir_flag_spec
 
 # If ld is used when linking, flag to hardcode \$libdir into a binary
@@ -15630,9 +15631,9 @@ ltmain="$ac_aux_dir/ltmain.sh"
   sed -e '/^func_dirname ()$/,/^} # func_dirname /c\
 func_dirname ()\
 {\
-\    case ${1} in\
-\      */*) func_dirname_result="${1%/*}${2}" ;;\
-\      *  ) func_dirname_result="${3}" ;;\
+\    case ${1} in\
+\      */*) func_dirname_result="${1%/*}${2}" ;;\
+\      *  ) func_dirname_result="${3}" ;;\
 \    esac\
 } # Extended-shell func_dirname implementation' "$cfgfile" > $cfgfile.tmp \
   && mv -f "$cfgfile.tmp" "$cfgfile" \
@@ -15653,10 +15654,10 @@ test 0 -eq $? || _lt_function_replace_fail=:
   sed -e '/^func_dirname_and_basename ()$/,/^} # func_dirname_and_basename /c\
 func_dirname_and_basename ()\
 {\
-\    case ${1} in\
-\      */*) func_dirname_result="${1%/*}${2}" ;;\
-\      *  ) func_dirname_result="${3}" ;;\
-\    esac\
+\    case ${1} in\
+\      */*) func_dirname_result="${1%/*}${2}" ;;\
+\      *  ) func_dirname_result="${3}" ;;\
+\    esac\
 \    func_basename_result="${1##*/}"\
 } # Extended-shell func_dirname_and_basename implementation' "$cfgfile" > $cfgfile.tmp \
   && mv -f "$cfgfile.tmp" "$cfgfile" \
@@ -15667,10 +15668,10 @@ test 0 -eq $? || _lt_function_replace_fail=:
   sed -e '/^func_stripname ()$/,/^} # func_stripname /c\
 func_stripname ()\
 {\
-\    # pdksh 5.2.14 does not do ${X%$Y} correctly if both X and Y are\
-\    # positional parameters, so assign one to ordinary parameter first.\
-\    func_stripname_result=${3}\
-\    func_stripname_result=${func_stripname_result#"${1}"}\
+\    # pdksh 5.2.14 does not do ${X%$Y} correctly if both X and Y are\
+\    # positional parameters, so assign one to ordinary parameter first.\
+\    func_stripname_result=${3}\
+\    func_stripname_result=${func_stripname_result#"${1}"}\
 \    func_stripname_result=${func_stripname_result%"${2}"}\
 } # Extended-shell func_stripname implementation' "$cfgfile" > $cfgfile.tmp \
   && mv -f "$cfgfile.tmp" "$cfgfile" \
@@ -15681,7 +15682,7 @@ test 0 -eq $? || _lt_function_replace_fail=:
   sed -e '/^func_split_long_opt ()$/,/^} # func_split_long_opt /c\
 func_split_long_opt ()\
 {\
-\    func_split_long_opt_name=${1%%=*}\
+\    func_split_long_opt_name=${1%%=*}\
 \    func_split_long_opt_arg=${1#*=}\
 } # Extended-shell func_split_long_opt implementation' "$cfgfile" > $cfgfile.tmp \
   && mv -f "$cfgfile.tmp" "$cfgfile" \
@@ -15692,7 +15693,7 @@ test 0 -eq $? || _lt_function_replace_fail=:
   sed -e '/^func_split_short_opt ()$/,/^} # func_split_short_opt /c\
 func_split_short_opt ()\
 {\
-\    func_split_short_opt_arg=${1#??}\
+\    func_split_short_opt_arg=${1#??}\
 \    func_split_short_opt_name=${1%"$func_split_short_opt_arg"}\
 } # Extended-shell func_split_short_opt implementation' "$cfgfile" > $cfgfile.tmp \
   && mv -f "$cfgfile.tmp" "$cfgfile" \
@@ -15703,9 +15704,9 @@ test 0 -eq $? || _lt_function_replace_fail=:
   sed -e '/^func_lo2o ()$/,/^} # func_lo2o /c\
 func_lo2o ()\
 {\
-\    case ${1} in\
-\      *.lo) func_lo2o_result=${1%.lo}.${objext} ;;\
-\      *)    func_lo2o_result=${1} ;;\
+\    case ${1} in\
+\      *.lo) func_lo2o_result=${1%.lo}.${objext} ;;\
+\      *)    func_lo2o_result=${1} ;;\
 \    esac\
 } # Extended-shell func_lo2o implementation' "$cfgfile" > $cfgfile.tmp \
   && mv -f "$cfgfile.tmp" "$cfgfile" \
@@ -15758,7 +15759,7 @@ test 0 -eq $? || _lt_function_replace_fail=:
   sed -e '/^func_append_quoted ()$/,/^} # func_append_quoted /c\
 func_append_quoted ()\
 {\
-\    func_quote_for_eval "${2}"\
+\    func_quote_for_eval "${2}"\
 \    eval "${1}+=\\\\ \\$func_quote_for_eval_result"\
 } # Extended-shell func_append_quoted implementation' "$cfgfile" > $cfgfile.tmp \
   && mv -f "$cfgfile.tmp" "$cfgfile" \
