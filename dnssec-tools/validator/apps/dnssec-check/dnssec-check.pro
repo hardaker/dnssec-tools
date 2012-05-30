@@ -36,10 +36,6 @@ isEmpty(ANDROID_PLATFORM) {
         LIBS        += -lval-threads -lsres -lcrypto -lpthread
     }
 
-    win32 {
-        QMAKE_LIBDIR += /MinGW/msys/1.0/lib/
-        LIBS += -lws2_32
-    }
 } else {
     QMAKE_LIBDIR += /opt/android-external-openssl/lib/
     QMAKE_LIBDIR += /root/necessitas/android-ndk-r5c/platforms/android-4/arch-arm/usr/lib/
