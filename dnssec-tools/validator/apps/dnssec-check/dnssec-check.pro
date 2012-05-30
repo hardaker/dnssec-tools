@@ -17,6 +17,12 @@ isEmpty(ANDROID_PLATFORM) {
     QMAKE_LIBDIR     += ../../libval/.libs
     QMAKE_LIBDIR     += ../../libsres/.libs
 
+    osx {
+        LIBS        += -lval-threads -lsres -lcrypto -lpthread
+    } else {
+        LIBS        += -lval-threads -lsres -lcrypto -lpthread
+    }
+
     contains(MEEGO_EDITION,harmattan): {
         QMAKE_LIBDIR += /scratchbox/users/hardaker/targets/HARMATTAN_ARMEL/usr/lib
     } else:osx {
@@ -28,6 +34,11 @@ isEmpty(ANDROID_PLATFORM) {
         LIBS += -lval-threads -lsres -leay32 -lpthread -lws2_32
     } else {
         LIBS        += -lval-threads -lsres -lcrypto -lpthread
+    }
+
+    win32 {
+        QMAKE_LIBDIR += /MinGW/msys/1.0/lib/
+        LIBS += -lws2_32
     }
 } else {
     QMAKE_LIBDIR += /opt/android-external-openssl/lib/
