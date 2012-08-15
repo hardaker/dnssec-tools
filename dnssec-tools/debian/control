@@ -1,0 +1,37 @@
+Source: dnssec-tools
+Priority: extra
+Maintainer: Wes Hardaker <wjhns177@hardakers.net>
+Build-Depends: debhelper (>= 5), autotools-dev, libssl-dev
+Standards-Version: 3.7.2
+Section: libs
+
+Package: libsres
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A DNS resolving library
+
+Package: libsres-dev
+Section: libdevel
+Architecture: any
+Depends: libsres (= ${Source-Version})
+Description: A DNS resolving library
+
+Package: libval-threads
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, openssl, libsres
+Description: A DNS resolving library that includes DNSSEC validation
+
+Package: libval-threads-dev
+Section: libdevel
+Architecture: any
+Depends: libval-threads (= ${Source-Version}), libsres-dev
+Description: A DNS resolving library that includes DNSSEC validation
+
+Package: dns-validator
+Section: tools
+Architecture: any
+Depends: libval-threads, libsres
+Description: Tools for testing DNS resolving and DNSSEC validation
+

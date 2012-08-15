@@ -1,0 +1,115 @@
+dnssec-tools (1.13-1) unstable; urgency=low
+ 
+  * update to 1.13
+ 
+ -- Wes Hardaker <wjhns177@hardakers.net>  Mon, 05 Jul 2012 11:00:00 -0700
+
+dnssec-tools (1.12-2) unstable; urgency=low
+ 
+  * 1.12 fix for tcp
+ 
+ -- Wes Hardaker <wjhns177@hardakers.net>  Mon, 27 Mar 2012 11:00:00 -0700
+
+dnssec-tools (1.12-1) unstable; urgency=low
+ 
+  * 1.12 package upgrade
+ 
+ -- Wes Hardaker <wjhns177@hardakers.net>  Mon,  3 Feb 2012 11:00:00 -0700
+
+dnssec-tools (1.11-1) unstable; urgency=low
+ 
+  * 1.11 package upgrade
+ 
+ -- Wes Hardaker <wjhns177@hardakers.net>  Mon, 03 Oct 2011 09:43:00 -0700
+
+dnssec-tools (1.9-1) unstable; urgency=low
+ 
+  * 1.9 package upgrade
+ 
+ -- Wes Hardaker <wjhns177@hardakers.net>  Mon, 27 Mar 2011 14:05:00 -0700
+
+dnssec-tools (1.8-3) unstable; urgency=low
+ 
+  * optify the packages
+ 
+ -- Wes Hardaker <wjhns177@hardakers.net>  Mon, 27 Sep 2010 09:14:33 -0700
+
+dnssec-tools (1.8-2) unstable; urgency=low
+ 
+  * use /dev/null for the resolv.conf file to always fully recurse
+ 
+ -- Wes Hardaker <wjhns177@hardakers.net>  Fri, 24 Sep 2010 16:22:16 -0700
+
+dnssec-tools (1.8-1) unstable; urgency=low
+ 
+  * updated to the upstream 1.8 release
+ 
+ -- Wes Hardaker <wjhns177@hardakers.net>  Fri, 24 Sep 2010 16:22:16 -0700
+
+dnssec-tools (1.7-11) unstable; urgency=low
+ 
+  * fixed libval-threads to -dev prereqs
+ 
+ -- Wes Hardaker <wjhns177@hardakers.net>  Fri, 17 Sep 2010 16:00:00 -0700
+
+dnssec-tools (1.7-10) unstable; urgency=low
+
+  * remove more old packages from system first.  whoops.
+
+ -- Wes Hardaker <wjhns177@hardakers.net>  Thu, 16 Sep 2010 16:00:00 -0700
+
+dnssec-tools (1.7-9) unstable; urgency=low
+
+  * remove old packages from system first.  whoops.
+
+ -- Wes Hardaker <wjhns177@hardakers.net>  Thu, 16 Sep 2010 14:10:00 -0700
+
+dnssec-tools (1.7-8) unstable; urgency=low
+
+  * Version bump for rebuild without /usr/lib/libc.so
+
+ -- Wes Hardaker <wjhns177@hardakers.net>  Thu, 16 Sep 2010 13:45:17 -0700
+
+dnssec-tools (1.7-7) unstable; urgency=low
+
+  * Link libraries directly to libcrypto; change packaging structure;
+    added a shlibs file
+
+ -- Wes Hardaker <wjhns177@hardakers.net>  Fri, 27 Aug 2010 10:12:20 -0700
+
+dnssec-tools (1.7-6) unstable; urgency=low
+
+  * ok, try without optify first
+
+ -- Wes Hardaker <wjhns177@hardakers.net>  Thu, 27 Aug 2010 09:53:00 -0700
+
+dnssec-tools (1.7-5) unstable; urgency=low
+
+  * fix accidental creation of a double lib directory in the rules
+
+ -- Wes Hardaker <wjhns177@hardakers.net>  Thu, 27 Aug 2010 08:45:00 -0700
+
+dnssec-tools (1.7-4) unstable; urgency=low
+
+  * require xutils-dev for using mkdirhier
+
+ -- Wes Hardaker <wjhns177@hardakers.net>  Thu, 27 Aug 2010 08:00:14 -0700
+
+dnssec-tools (1.7-3) unstable; urgency=low
+
+  * fix Add missing openssl requirement
+
+ -- Wes Hardaker <wjhns177@hardakers.net>  Thu, 27 Aug 2010 07:30:00 -0700
+
+dnssec-tools (1.7-2) unstable; urgency=low
+
+  * fix missing build file when uploading
+
+ -- Wes Hardaker <wjhns177@hardakers.net>  Thu, 27 Aug 2010 06:30:00 -0700
+
+dnssec-tools (1.7-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Wes Hardaker <wjhns177@hardakers.net>  Thu, 26 Aug 2010 16:05:14 -0700
+
