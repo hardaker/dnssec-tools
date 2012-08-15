@@ -60,6 +60,10 @@ clean:
 	dh_testroot
 	rm -f build-stamp 
 
+	rm -rf debian/libval-threads debian/libval-threads-dev
+	rm -rf debian/libval-shim debian/libsres debian/libsres-dev
+	rm -rf debian/dns-validator debian/tmp
+
 	# Add here commands to clean up after the build process.
 	-cd validator && $(MAKE) distclean
 ifneq "$(wildcard /usr/share/misc/config.sub)" ""
@@ -126,8 +130,8 @@ install: build
 	rm -rf `pwd`/debian/libval_shim
 
 	# libtool finish the directories
-	/bin/sh libtool --mode=finish `pwd`/debian/libvalsres/usr/lib
-	/bin/sh libtool --mode=finish `pwd`/debian/libval-threads/usr/lib
+	/bin/sh validator/libtool --mode=finish `pwd`/debian/libsres/usr/lib
+	/bin/sh validator/libtool --mode=finish `pwd`/debian/libval-threads/usr/lib
 	#/bin/sh libtool --mode=finish `pwd`/debian/libval_shim/usr/lib
 
 	# config files
